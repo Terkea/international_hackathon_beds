@@ -1,0 +1,66 @@
+OK.  Just got up and have a pile to do.
+
+I created that site using a bootstrap template but there is another called
+IUSCH1
+
+I was trying to encorporate the best features of both templates.
+
+I created a DB called Hackathon to store universities, registrations, groups, and students in each group.
+
+The idea is that a University first registers with contact details.  I have a list of possible Universities.
+
+Then a student registers but only if the University has first registered.
+
+Then a group is created for Universities that have registered
+
+Then students sign up to a group.
+
+FOUR STAGES
+
+Then as each University registers they are displayed in a dynamic list. (Optional)
+
+There really ought to be a Contact US section if students have queries
+
+Also a way of downloading or displaying the scenarios.  I was going to make them accessible only to registered students but that is not necessary.
+
+There are currently BCS Student Chapters at:
+
+
+Aberystwyth
+Aston
+Bath
+Bedfordshire
+Bradford
+Cardiff Met
+Coventry
+Dundee
+Edinburgh
+Glyndwr
+Hull
+Kent
+Lancaster
+Leeds
+Leeds Beckett
+Leicester
+LJMU – Girls in Tech
+Newcastly
+Northumbria
+Nottingham Trent
+Open University
+Plymouth
+Reading
+Salford
+Stirling
+Sunderland
+Surrey,
+Sussex,
+University of South Wales
+Warwick
+Wolverhampton
+Birkbeck
+Brunel
+Goldsmiths
+GSM
+London Met
+Queen Mary
+Royal Holloway
