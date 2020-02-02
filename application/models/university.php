@@ -6,5 +6,10 @@ class University extends CI_Model {
         {
                 $this->load->database();
         }
+
+        public function register_university($data){
+                $this->db->insert('university', $data);
+                return $this->db->insert_id();
+        }
 }
 

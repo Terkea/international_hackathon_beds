@@ -15,6 +15,8 @@ class Register_User extends CI_Controller {
 	}
 
 	function validation(){
+		// todo: password encryption, load the list with the available universities
+		// push errors to the view
 		$this->form_validation->set_rules('first_name', 'First Name', 'required|trim');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'required|trim');
 		$this->form_validation->set_rules('email', 'Email', 'required|trim');
@@ -29,6 +31,7 @@ class Register_User extends CI_Controller {
 			$data = array(
 				'first_name'	=>	$this->input->post('first_name'),
 				'last_name'		=>	$this->input->post('last_name'),
+				// todo
 				'university_id' =>	'2',
 				'email'			=>	$this->input->post('email'),
 				'year'			=>	$this->input->post('year'),
