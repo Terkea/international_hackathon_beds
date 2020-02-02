@@ -64,23 +64,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h1 class="title">Register student</h1>
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card card-login card-plain">
-            <form class="form" method="" action="">
+
+            <form class="form" method="post" action="<?php echo base_url(); ?>register_user/validation">
               <div class="card-header text-center">
               </div>
               <div class="card-body">
 
+                 
                 <div class="input-group no-border input-lg">
-                  <input type="text" class="form-control" placeholder="First Name">
+                  <input type="text" class="form-control" name="first_name"
+                  value="<?php echo set_value('first_name'); ?>" placeholder="First Name">
+                </div>
+                
+                 
+                <div class="input-group no-border input-lg">
+                  <input type="text" placeholder="Last Name" name="last_name"
+                  value="<?php echo set_value('last_name'); ?>" class="form-control" />
                 </div>
 
+                 
                 <div class="input-group no-border input-lg">
-                  <input type="text" placeholder="Last Name" class="form-control" />
+                  <input type="text" placeholder="Email address" name="email"
+                  value="<?php echo set_value('email'); ?>" class="form-control" />
                 </div>
 
-                <div class="input-group no-border input-lg">
-                  <input type="text" placeholder="Email address" class="form-control" />
-                </div>
-
+                 
                 <div class="input-group no-border input-lg">
                 <select class="form-control" id="select-uni" placeholder="University">
                   <option value="">Select your university...</option>
@@ -92,24 +100,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </select>
                 </div>
 
+                 
                 <div class="input-group no-border input-lg">
-                  <input type="text" placeholder="The course your currently studying" class="form-control" />
+                  <input type="text" placeholder="The course your currently studying"
+                   value="<?php echo set_value('course'); ?>" name="course" class="form-control" />
                 </div>
 
+                 
                 <div class="input-group no-border input-lg">
-                  <input type="text" placeholder="Year of study" class="form-control" />
+                  <input type="text" placeholder="Year of study" name="year" 
+                  value="<?php echo set_value('year'); ?>" class="form-control" />
                 </div>
 
+                 
                 <div class="input-group no-border input-lg">
-                <input type="text" class="form-control date-picker" placeholder="Date of birth" data-datepicker-color="primary">
+                <input type="text" class="form-control date-picker" placeholder="Date of birth" name="dob"
+                value="<?php echo set_value('dob'); ?>"  data-datepicker-color="primary">
                 </div>
 
+                 
                 <div class="input-group no-border input-lg">
-                  <input type="password" placeholder="Password" class="form-control" />
-                </div>
-
-                <div class="input-group no-border input-lg">
-                  <input type="password" placeholder="Confirm password" class="form-control" />
+                  <input type="password" placeholder="Password" name="password" class="form-control" />
                 </div>
 
                 <li>If your university doesnt appear on the select menu that means it wasn't registered yet. To do so please access the following link</li>
@@ -117,7 +128,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               </div>
               <div class="card-footer text-center">
-                <a href="" class="btn btn-primary btn-round btn-lg btn-block">Register</a>
+                <input type="submit" name='register_user' class="btn btn-primary btn-round btn-lg btn-block">
             </form>
             </div>
           </div>

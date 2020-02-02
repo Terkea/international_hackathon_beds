@@ -5,7 +5,6 @@ class Register_Team extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('team');
-		$this->load->helper('url');
 	}
 	
 	public function index()
