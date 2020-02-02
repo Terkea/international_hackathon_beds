@@ -57,4 +57,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login/index'] = 'login';
 $route['register_user/index'] = 'register';
 $route['register_uni/index'] = 'register_uni';
-$route['register_group/index'] = 'register_group';
+$route['register_team/index'] = 'register_team';

@@ -1,14 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Register_Group extends CI_Controller {
+class Register_Team extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('team');
 		$this->load->helper('url');
 	}
 	
 	public function index()
 	{
-		$this->load->view('register_group');
+		$this->load->view('register_team');
 	}
 }
