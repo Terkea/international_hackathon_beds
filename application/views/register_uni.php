@@ -72,6 +72,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="card-body">
 
+              <span class="text-danger">
+                <?php echo form_error('name');?>
+                <?php echo form_error('contact_first_name');?> 
+                <?php echo form_error('contact_last_name');?> 
+                <?php echo form_error('university_id');?> 
+              </span>
+
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">

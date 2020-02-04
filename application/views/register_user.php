@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="card-body">
 
-              <span class="text-danger" style="size: 6px;">
+              <span class="text-danger">
                 <?php echo form_error('first_name');?>
                 <?php echo form_error('last_name');?> 
                 <?php echo form_error('email');?> 
