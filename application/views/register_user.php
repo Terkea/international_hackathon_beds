@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="page-header clear-filter" filter-color="orange">
+  <div class="page-header clear-filter" filter-color="orange" style="min-height: auto; max-height:none;">
     <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/login.jpg)"></div>
     <div class="content" style="margin-top: 6%;">
       <div class="container">
@@ -70,13 +70,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="card-body">
 
-                 
+              <span class="text-danger" style="size: 6px;">
+                <?php echo form_error('first_name');?>
+                <?php echo form_error('last_name');?> 
+                <?php echo form_error('email');?> 
+                <?php echo form_error('university_id');?> 
+                <?php echo form_error('course');?> 
+                <?php echo form_error('year');?> 
+                <?php echo form_error('dob');?> 
+                <?php echo form_error('password');?> 
+              </span>
+
                 <div class="input-group no-border input-lg">
                   <input type="text" class="form-control" name="first_name"
                   value="<?php echo set_value('first_name'); ?>" placeholder="First Name">
                 </div>
-                
-                 
+
                 <div class="input-group no-border input-lg">
                   <input type="text" placeholder="Last Name" name="last_name"
                   value="<?php echo set_value('last_name'); ?>" class="form-control" />
@@ -100,7 +109,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </select>
                 </div>
 
-                 
                 <div class="input-group no-border input-lg">
                   <input type="text" placeholder="The course your currently studying"
                    value="<?php echo set_value('course'); ?>" name="course" class="form-control" />
@@ -130,6 +138,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="card-footer text-center">
                 <input type="submit" name='register_user' class="btn btn-primary btn-round btn-lg btn-block">
             </form>
+
+
             </div>
           </div>
         </div>
