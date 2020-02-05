@@ -99,13 +99,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                  
                 <div class="input-group no-border input-lg">
-                <select class="form-control" id="select-uni" placeholder="University">
+                <select class="form-control" id="select-uni" name="university_id" placeholder="University">
                   <option value="">Select your university...</option>
-                  <option style="color: black;">1</option>
-                  <option style="color: black;">2</option>
-                  <option style="color: black;">3</option>
-                  <option style="color: black;">4</option>
-                  <option style="color: black;">5</option>
+                  
+
+                  <?php foreach ($universities as $key): ?>
+                    <option value="<?= $key['id'] ?>" style="color: black;"> <?= $key['name'] ?> </option>
+                    <br>
+                  <?php endforeach ?>
+
                 </select>
                 </div>
 
@@ -132,6 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <li>If your university doesnt appear on the select menu that means it wasn't registered yet. To do so please access the following link</li>
+                <br>
                 <li>By registering you agree on the terms and conditions of the event</li>
 
               </div>

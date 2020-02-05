@@ -8,8 +8,8 @@ class Register_Uni extends CI_Controller {
 		$this->load->library('form_validation');
 	}
 	
-	public function index()
-	{
+	public function index(){
+
 		$this->load->view('register_uni');
 	}
 

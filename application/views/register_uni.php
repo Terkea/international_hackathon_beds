@@ -72,6 +72,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="card-body">
 
+
+
               <span class="text-danger">
                 <?php echo form_error('name');?>
                 <?php echo form_error('contact_first_name');?> 

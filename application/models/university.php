@@ -11,5 +11,12 @@ class University extends CI_Model {
                 $this->db->insert('university', $data);
                 return $this->db->insert_id();
         }
+
+        public function get_universities(){
+                $query = $this->db->get('university');
+		if ($query->num_rows()>0) {
+			return $query->result_array();
+		}
+        }
 }
 
