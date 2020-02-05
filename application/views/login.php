@@ -1,3 +1,20 @@
+<!--
+
+=========================================================
+* Now UI Kit - v1.3.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/now-ui-kit
+* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md)
+
+* Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
@@ -64,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-md-4 ml-auto mr-auto">
         <h1 class="title">IUSCH LOGIN</h1>
           <div class="card card-login card-plain">
-            <form class="form" method="post" action="<?php echo base_url();?>login/validation">
+            <form class="form" method="post" action="<?php echo base_url();?>user/validation">
               <div class="card-header text-center">
                 <div class="logo-container">
                   

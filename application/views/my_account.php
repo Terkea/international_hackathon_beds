@@ -15,16 +15,13 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 -->
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?php echo base_url(); ?>/assets/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Now UI Kit by Creative Tim
@@ -34,13 +31,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- CSS Files -->
-  <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="<?php echo base_url(); ?>/assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="<?php echo base_url(); ?>/assets/demo/demo.css" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="login-page sidebar-collapse">
+<body class="profile-page sidebar-collapse">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
     <div class="container">
@@ -64,88 +61,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="<?php echo base_url(); ?>assets/img/blurred-image-1.jpg">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>index.html">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <a class="nav-link" href="<?php echo base_url() . 'user/logout'; ?>">Logout</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="page-header clear-filter" >
-    <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/bg11.jpg)"></div>
-    <div class="content">
+  <div class="wrapper">
+    <div class="page-header clear-filter page-header-small" filter-color="orange">
+      <div class="page-header-image" data-parallax="true" style="background-image:url('<?php echo base_url(); ?>assets/img/bg5.jpg');">
+      </div>
       <div class="container">
-        <div class="col-md-4 ml-auto mr-auto">
-          <div class="card card-signup" data-background-color="orange" style="margin-top:10%">
-
-            <form class="form" method="post" action="<?php echo base_url(); ?>register_uni/validation">
-              <div class="card-header text-center">
-              <h3 class="card-title title-up">Register University</h3>
-                <div class="logo-container">
-                </div>
-              </div>
-              <div class="card-body">
-
-
-
-              <span class="text-danger">
-                <?php echo form_error('name');?>
-                <?php echo form_error('contact_first_name');?> 
-                <?php echo form_error('contact_last_name');?> 
-                <?php echo form_error('university_id');?> 
-              </span>
-
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="now-ui-icons text_caps-small"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="name" class="form-control" placeholder="University name">
-                </div>
-
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                    <i class="now-ui-icons users_circle-08"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="contact_first_name" placeholder="Contact first name" class="form-control" />
-                </div>
-
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                    <i class="now-ui-icons users_circle-08"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="contact_last_name" placeholder="Contact last name" class="form-control" />
-                </div>
-
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                    <i class="now-ui-icons users_circle-08"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="contact_email" placeholder="Contact email" class="form-control" />
-                </div>
-
-              </div>
-              
-
-              <div class="card-footer text-center">
-                <input type="submit" name='register_uni' class="btn btn-neutral btn-round btn-lg">
-            </form>
-            </div>
-          </div>
+        <div class="photo-container">
+          <img src="<?php echo base_url(); ?>assets/img/ryan.jpg" alt="">
         </div>
+        <h3 class="title"><?php echo $user[0]->first_name . " " .  $user[0]->last_name; ?></h3>
+        <p class="category"><?php echo $user[0]->email;?></p>
       </div>
     </div>
-    <footer class="footer">
+    <div class="section">
+        <h3 class="title">Team</h3>
+        <h5 class="description">An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</h5>
+      </div>
+    </div>
+    <footer class="footer footer-default">
       <div class=" container ">
         <nav>
           <ul>

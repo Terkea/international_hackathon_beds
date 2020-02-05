@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class User extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('student');
@@ -28,11 +28,11 @@ class Login extends CI_Controller {
 						'email'		=>		$email
 					);
 					$this->session->set_userdata($session_data);
-					redirect(base_url() . 'login/my_account');
+					redirect(base_url() . 'user/my_account');
 
 				}else{
 					$this->session->set_flashdata('error', $decrypted_password);
-					redirect(base_url() . 'login');
+					redirect(base_url() . 'user');
 				}
 			}
 		}else{
@@ -42,9 +42,10 @@ class Login extends CI_Controller {
 
 	public function my_account(){
 		if($this->session->userdata('email') != ''){
-			echo $this->session->userdata('email');
+			$data['user'] = $this->student->get_by_email($this->session->userdata('email'));
+			$this->load->view('my_account', $data);
 		}else{
-			redirect(base_url() . 'login/login');
+			redirect(base_url() . 'user');
 		}
 	}
 
