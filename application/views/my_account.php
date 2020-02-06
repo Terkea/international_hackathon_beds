@@ -82,7 +82,73 @@
     </div>
     <div class="section">
         <h3 class="title">Team</h3>
-        <h5 class="description">An artist of considerable range, Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable range.</h5>
+
+
+        
+
+        <?php if ($my_team === false): ?>
+        <h5 class="description">
+        It looks like you haven't signed up to any team yet.
+        You can either create your own team or join an existing one.
+        </h5>
+
+        <div class="container">
+          <div class="col-md-4 ml-auto mr-auto">
+            <div class="card card-signup" data-background-color="orange">
+                <form action="" class="form">
+                    <div class="card-header text-center">
+                        <h3 class="card-title title-up">Join a team</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                        <label for="exampleFormControlSelect1" class="text-center">Your university has those teams currently registered:</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="" style="color: black;">Pick up your team...</option>
+                            <option style="color: black;">2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        </div>
+                        </div>
+                      <div class="card-footer text-center">
+                        <input type="submit" class="btn btn-neutral btn-round btn-lg" value="Team up">
+                      </div>
+                    </div>
+                </form>
+            </div>
+          </div>
+
+          <div class="section section-contact-us text-center">
+            <div class="container">
+              <h2 class="title">Create your own team</h2>
+              <div class="row">
+                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+                  <div class="input-group input-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="now-ui-icons users_circle-08"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Team name">
+                  </div>
+                  <div class="send-button">
+                    <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Create</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <?php else: ?>
+
+        <h3>Hi unknown user</h3>
+        <?php endif; ?>
+
+        
+
+
       </div>
     </div>
     <footer class="footer footer-default">

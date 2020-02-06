@@ -5,6 +5,8 @@ class User extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('student');
+		$this->load->model('team');
+		$this->load->model('team_member');
 		$this->load->helper('url');
 		$this->load->library('form_validation');
 		$this->load->library('encryption');
@@ -43,6 +45,9 @@ class User extends CI_Controller {
 	public function my_account(){
 		if($this->session->userdata('email') != ''){
 			$data['user'] = $this->student->get_by_email($this->session->userdata('email'));
+			$data['university_id'] = $data['user'][0]->university_id;
+			$data['teams'] = $this->team->get_by_university_id($data['university_id']);
+			$data['my_team'] = $this->team_member->check_user_team($data['user'][0]->id);
 			$this->load->view('my_account', $data);
 		}else{
 			redirect(base_url() . 'user');
