@@ -82,10 +82,7 @@
     </div>
     <div class="section">
         <h3 class="title">Team</h3>
-
-
         
-
         <?php if ($my_team === false): ?>
         <h5 class="description">
         It looks like you haven't signed up to any team yet.
@@ -95,19 +92,21 @@
         <div class="container">
           <div class="col-md-4 ml-auto mr-auto">
             <div class="card card-signup" data-background-color="orange">
-                <form action="" class="form">
+                <form action="<?php echo base_url(); ?>user/join_team" method="post" class="form">
                     <div class="card-header text-center">
                         <h3 class="card-title title-up">Join a team</h3>
                     </div>
                     <div class="card-body">
                         <div class="form-group">
+                        <input type="hidden" name="student_id" value="<?php echo $user[0]->id?>">
                         <label for="exampleFormControlSelect1" class="text-center">Your university has those teams currently registered:</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" name="team_id" id="exampleFormControlSelect1">
+                            
                             <option value="" style="color: black;">Pick up your team...</option>
-                            <option style="color: black;">2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <?php foreach ($teams as $key): ?>
+                              <option value="<?= $key->id ?>" style="color: black;"> <?= $key->name ?> </option>
+                              <br>
+                            <?php endforeach ?>
                         </select>
                         </div>
                         </div>
@@ -121,6 +120,7 @@
 
           <div class="section section-contact-us text-center">
             <div class="container">
+            <form action="<?php echo base_url(); ?>user/create_team" method="post" class="form">
               <h2 class="title">Create your own team</h2>
               <div class="row">
                 <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
@@ -130,20 +130,27 @@
                         <i class="now-ui-icons users_circle-08"></i>
                       </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Team name">
+                    <input type="hidden" name="university_id" value="<?php echo $user[0]->university_id;?>">
+                    <input type="hidden" name="team_leader" value="<?php echo $user[0]->id;?>">
+                    <input type="text" class="form-control" name="team_name" placeholder="Team name">
                   </div>
                   <div class="send-button">
-                    <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Create</a>
+                    <input type="submit" class="btn btn-primary btn-round btn-block btn-lg" value="Create team">
                   </div>
                 </div>
               </div>
             </div>
+            </form>
           </div>
         </div>
 
         <?php else: ?>
 
-        <h3>Hi unknown user</h3>
+        <div class="container">
+
+          <h4 class="text-center">You are currently a proud member of the team <?php echo $my_team[0]->team_id;?></h4>
+
+        </div>
         <?php endif; ?>
 
         

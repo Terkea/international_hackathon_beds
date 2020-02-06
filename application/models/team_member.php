@@ -18,5 +18,10 @@ class Team_Member extends CI_Model {
                         return false;
                 }
         }
+
+        public function register_member($data){
+                $this->db->insert('team_member', $data);
+                return $this->db->insert_id();
+        }
 }
 

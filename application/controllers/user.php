@@ -58,4 +58,57 @@ class User extends CI_Controller {
 		$this->session->unset_userdata('email');
 		redirect(base_url() . 'welcome');
 	}
+
+	public function join_team(){
+		$this->form_validation->set_rules('student_id', 'User', 'required');
+		$this->form_validation->set_rules('team_id', 'Team', 'required');
+		if ($this->form_validation->run()){
+			$team_id = $this->input->post('team_id');
+			$student_id = $this->input->post('student_id');
+			$data = array(
+				'team_id'		=>	$this->input->post('team_id'),
+				'student_id'	=>	$this->input->post('student_id')
+			);
+			$id = $this->team_member->register_member($data);
+
+			if ($id > 0){
+				redirect('/user/my_account');
+			}
+		}else{
+			$this->my_account();
+		}
+	}
+
+	public function create_team(){
+		$this->form_validation->set_rules('team_leader', 'User', 'required');
+		$this->form_validation->set_rules('university_id', 'University', 'required');
+		$this->form_validation->set_rules('team_name', 'Team name', 'required');
+		if ($this->form_validation->run()){
+			$team_leader = $this->input->post('team_leader');
+			$university_id = $this->input->post('university_id');
+			$name = $this->input->post('team_name');
+
+			$data_team = array(
+				'team_leader'		=>	$this->input->post('team_leader'),
+				'university_id'	=>	$this->input->post('university_id'),
+				'name'	=>	$this->input->post('team_name')
+			);
+
+			$team_id = $this->team->register_team($data_team);
+
+			$data_member = array(
+				'team_id'		=>	$team_id,
+				'student_id'	=>	$this->input->post('team_leader')
+			);
+			
+			$id = $this->team_member->register_member($data_member);
+
+			if ($id > 0){
+				redirect('/user/my_account');
+			}
+		}else{
+			$this->my_account();
+		}
+	}
+
 }
