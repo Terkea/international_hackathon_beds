@@ -58,3 +58,4 @@ $route['user/index'] = 'user';
 $route['register_user/index'] = 'register';
 $route['register_uni/index'] = 'register_uni';
 $route['register_team/index'] = 'register_team';
+// $route['scenarious/index'] = 'scenario';

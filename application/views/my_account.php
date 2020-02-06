@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Kit by Creative Tim
+    IUSCH | My profile
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -33,8 +33,7 @@
   <!-- CSS Files -->
   <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="<?php echo base_url(); ?>assets/demo/demo.css" rel="stylesheet" />
+
 </head>
 
 <body class="profile-page sidebar-collapse">
@@ -147,9 +146,7 @@
         <?php else: ?>
 
         <div class="container">
-
-          <h4 class="text-center">You are currently a proud member of the team <?php echo $my_team[0]->team_id;?></h4>
-
+          <h4 class="text-center">You are currently a proud member of the team <?php echo $this->team->get_by_id($my_team[0]->team_id)[0]->name;?></h4>
         </div>
         <?php endif; ?>
 
