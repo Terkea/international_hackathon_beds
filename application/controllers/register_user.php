@@ -45,7 +45,7 @@ class Register_User extends CI_Controller {
 			$id = $this->student->register_student($data);
 
 			if ($id > 0){
-				redirect('/login/index');
+				redirect('/user/');
 			}
 		}else{
 			$this->index();
