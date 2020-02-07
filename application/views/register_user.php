@@ -95,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </nav>
   <!-- End Navbar -->
   <div class="page-header clear-filter" filter-color="orange" style="min-height: auto; max-height:none;">
-    <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/login.jpg)"></div>
+    <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/uni/84177975_173569803983863_5960033139207176192_n.jpg)"></div>
     <div class="content" style="margin-top: 6%;">
       <div class="container">
         <h1 class="title">Register student</h1>

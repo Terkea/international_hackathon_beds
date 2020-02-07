@@ -111,4 +111,8 @@ class User extends CI_Controller {
 		}
 	}
 
+	public function contact_us(){
+		echo 'haha';
+	}
+
 }

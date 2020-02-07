@@ -93,7 +93,7 @@
   <!-- End Navbar -->
   <div class="wrapper">
     <div class="page-header clear-filter page-header-small" filter-color="orange">
-      <div class="page-header-image" data-parallax="true" style="background-image:url('<?php echo base_url(); ?>assets/img/bg5.jpg');">
+      <div class="page-header-image" data-parallax="true" style="background-image:url('<?php echo base_url(); ?>assets/img/uni/Colorminium_Bedforshire-Uni-Library_∏Hufton_Crow_013.jpg');">
       </div>
       <div class="container">
         <h3 class="title">Terms and conditions of participation</h3>

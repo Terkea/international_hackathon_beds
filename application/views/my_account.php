@@ -92,14 +92,11 @@
   <!-- End Navbar -->
   <div class="wrapper">
     <div class="page-header clear-filter page-header-small" filter-color="orange">
-      <div class="page-header-image" data-parallax="true" style="background-image:url('<?php echo base_url(); ?>assets/img/bg5.jpg');">
+      <div class="page-header-image" data-parallax="true" style="background-image:url('<?php echo base_url(); ?>assets/img/uni/Colorminium_Bedforshire-Uni-Library_∏Hufton_Crow_018.jpg');">
       </div>
       <div class="container">
-        <div class="photo-container">
-          <img src="<?php echo base_url(); ?>assets/img/ryan.jpg" alt="">
-        </div>
-        <h3 class="title"><?php echo $user[0]->first_name . " " .  $user[0]->last_name; ?></h3>
-        <p class="category"><?php echo $user[0]->email;?></p>
+        <h1 class="title"><?php echo $user[0]->first_name . " " .  $user[0]->last_name; ?></h1>
+        <h4 class="category"><?php echo $user[0]->email;?></h4>
       </div>
     </div>
     <div class="section">

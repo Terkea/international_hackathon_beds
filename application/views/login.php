@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="icon" type="image/png" href="<?php echo base_url(); ?>/assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Kit by Creative Tim
+    IUSCH | Login
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -95,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </nav>
   <!-- End Navbar -->
   <div class="page-header clear-filter" filter-color="orange">
-    <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/login.jpg)"></div>
+    <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/uni/UoB_JimStephenson-22-WebRes.jpg)"></div>
     <div class="content">
       <div class="container">
         <div class="col-md-4 ml-auto mr-auto">
