@@ -9,6 +9,7 @@ class Scenarious extends CI_Controller {
     }
 
     public function index(){
-        $this->load->view('scenarious');
+        $data['scenarious'] = $this->scenario->get_scenarious();
+        $this->load->view('scenarious', $data);
     }
 }
