@@ -47,13 +47,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
 
       <div class="navbar-translate">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo base_url() . 'welcome'?>">
           HOME
         </a>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo base_url() . 'scenarious'?>">
           SCENARIOS
         </a>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo base_url() . 'user/contact_us'?>">
           CONTACT US
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,14 +63,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </button>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="<?php echo base_url(); ?>assets/img/blurred-image-1.jpg">
-        <ul class="navbar-nav">
+        <?php if ($this->session->userdata('email') != ''): ?>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url() . 'user/my_account'?>">My profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url() . 'user/logout'?>">Logout</a>
+            </li>
+          </ul>
+        <?php else: ?>
+          <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>index.html">Login</a>
+            <a class="nav-link" href="<?php echo base_url() . 'user'; ?>">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <div class="dropdown">
+              <a class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Register
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="<?php echo base_url() . 'register_user'?>">Student</a>
+                <a class="dropdown-item" href="<?php echo base_url() . 'register_uni'?>">University</a>
+              </div>
+            </div>
           </li>
         </ul>
+        <?php endif; ?>
+
       </div>
     </div>
   </nav>
@@ -141,35 +161,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
 
-    <footer class="footer footer-default">
+    <footer class="footer footer-default text-center">
       <div class=" container ">
-        <nav>
-          <ul>
-            <li>
-              <a href="https://www.creative-tim.com">
-                Creative Tim
-              </a>
-            </li>
-            <li>
-              <a href="http://presentation.creative-tim.com">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="http://blog.creative-tim.com">
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="copyright" id="copyright">
           &copy;
           <script>
             document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-          </script>, Designed by
-          <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-        </div>
+          </script>
+          University of Bedfordshire
       </div>
     </footer>
   </div>

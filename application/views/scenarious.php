@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Now UI Kit by Creative Tim
+  IUSCH | Scenarious
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -49,7 +49,7 @@
         <a class="navbar-brand" href="<?php echo base_url() . 'scenarious'?>">
           SCENARIOS
         </a>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo base_url() . 'user/contact_us'?>">
           CONTACT US
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,14 +59,34 @@
         </button>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="<?php echo base_url(); ?>assets/img/blurred-image-1.jpg">
-        <ul class="navbar-nav">
+        <?php if ($this->session->userdata('email') != ''): ?>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url() . 'user/my_account'?>">My profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo base_url() . 'user/logout'?>">Logout</a>
+            </li>
+          </ul>
+        <?php else: ?>
+          <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url() . 'user'; ?>">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
+            <div class="dropdown">
+              <a class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Register
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="<?php echo base_url() . 'register_user'?>">Student</a>
+                <a class="dropdown-item" href="<?php echo base_url() . 'register_uni'?>">University</a>
+              </div>
+            </div>
           </li>
         </ul>
+        <?php endif; ?>
+
       </div>
     </div>
   </nav>
