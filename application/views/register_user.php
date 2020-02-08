@@ -36,6 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- CSS Files -->
   <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>/assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url(); ?>/assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -97,8 +98,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="page-header clear-filter" filter-color="orange" style="min-height: auto; max-height:none;">
     <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/uni/84177975_173569803983863_5960033139207176192_n.jpg)"></div>
     <div class="content" style="margin-top: 6%;">
-      <div class="container">
-        <h1 class="title">Register student</h1>
+      <div class="container animated tada">
+        <h2 class="title">Register student</h2>
         <div class="col-md-4 ml-auto mr-auto">
           <div class="card card-login card-plain">
 

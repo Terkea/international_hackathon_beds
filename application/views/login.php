@@ -36,6 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- CSS Files -->
   <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>/assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url(); ?>/assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -97,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div class="page-header clear-filter" filter-color="orange">
     <div class="page-header-image" style="background-image:url(<?php echo base_url(); ?>assets/img/uni/UoB_JimStephenson-22-WebRes.jpg)"></div>
     <div class="content">
-      <div class="container">
+      <div class="container animated flash">
         <div class="col-md-4 ml-auto mr-auto">
         <h1 class="title">IUSCH LOGIN</h1>
           <div class="card card-login card-plain">

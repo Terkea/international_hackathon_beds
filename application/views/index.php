@@ -37,13 +37,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- CSS Files -->
   <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url(); ?>assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="landing-page sidebar-collapse">
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top">
     <div class="container">
 
       <div class="navbar-translate">
@@ -95,31 +96,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="wrapper">
-    <div class="page-header page-header-small">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('<?php echo base_url(); ?>assets/img/bg6.jpg');">
-      </div>
-      <div class="content-center">
-        <div class="container">
-          <h1 class="title">Inter University Student</h1>
-          <h2 class="">Chapter Hakathon 2020</h2>
-          <h5>The BCS is constantly working to address the digital 
-          challenges facing our society to ensure technology’s impact is positive for everyone.</h5>
-          <div class="text-center">
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-google-plus"></i>
-            </a>
+  <div class="wrapper" style="padding-top: 70px;">
+    
+      <div class="container">
+      <br>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <img class="d-block" filter-color="orange" src="<?php echo base_url() . 'assets/img/uni/University-of-Bedfordshire-UK.jpg'?>" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated bounce" style="background-color:  black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit laboriosam officia minima dicta quidem modi, in illum quod corporis a perferendis, necessitatibus nihil provident mollitia impedit, voluptatibus nemo dolore ducimus.</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" filter-color="orange" src="<?php echo base_url() . 'assets/img/uni/Colorminium_Bedforshire-Uni-Library_∏Hufton_Crow_019.jpg'?>" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated bounce" style="background-color:  black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis alias cupiditate nemo saepe totam quibusdam perspiciatis accusamus temporibus explicabo commodi aperiam animi omnis laudantium quod aut maxime, fugit consequatur modi.</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" filter-color="orange" src="<?php echo base_url() . 'assets/img/uni/84096602_530518220903651_6661097498427260928_n.jpg'?>" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated bounce" style="background-color:  black;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam aspernatur eius maiores, vero quibusdam illum quo et facere ab eaque minus itaque suscipit, delectus aperiam quae esse cum at.</h5>
+              </div>
+            </div>
           </div>
-        </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <i class="now-ui-icons arrows-1_minimal-left"></i>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <i class="now-ui-icons arrows-1_minimal-right"></i>
+          </a>
+        </div>      
       </div>
+  </div>
+
+ 
+            
+
+
+
     </div>
-    <div class="section section-about-us">
+    <div class="section section-about-us animated pulse">
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">

@@ -37,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- CSS Files -->
   <link href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>/assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url(); ?>/assets/demo/demo.css" rel="stylesheet" />
 </head>

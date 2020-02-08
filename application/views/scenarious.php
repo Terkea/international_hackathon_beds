@@ -33,6 +33,7 @@
   <!-- CSS Files -->
   <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+  <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url(); ?>assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -95,8 +96,8 @@
     <div class="page-header clear-filter page-header-small" filter-color="orange">
       <div class="page-header-image" data-parallax="true" style="background-image:url('<?php echo base_url(); ?>assets/img/uni/Colorminium_Bedforshire-Uni-Library_∏Hufton_Crow_013.jpg');">
       </div>
-      <div class="container">
-        <h3 class="title">Terms and conditions of participation</h3>
+      <div class="container animated fadeIn">
+        <h3 class="title animated pulse">Terms and conditions of participation</h3>
         <h5 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sed quisquam expedita enim magni dolore eum hic rerum totam eius qui vero doloremque numquam suscipit dolorem quasi doloribus, nemo autem.</h5>
       </div>
     </div>
