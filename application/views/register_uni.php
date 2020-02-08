@@ -39,6 +39,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url(); ?>/assets/demo/demo.css" rel="stylesheet" />
+  <style>
+  ul.ui-autocomplete {
+      list-style: none;
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+  }
+  </style>
 </head>
 
 <body class="login-page sidebar-collapse">
@@ -116,44 +124,47 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php echo form_error('name');?>
                 <?php echo form_error('contact_first_name');?> 
                 <?php echo form_error('contact_last_name');?> 
-                <?php echo form_error('university_id');?> 
+                <?php echo form_error('contact_email');?> 
               </span>
 
                 <div class="input-group no-border input-lg">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
+                    <i class="now-ui-icons users_circle-08"></i>
+                    </span>
+                  </div>
+                  <input type="text" value="<?php echo set_value('contact_first_name'); ?>" name="contact_first_name" placeholder="Contact first name" class="form-control" />
+                </div>
+
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i class="now-ui-icons users_circle-08"></i>
+                    </span>
+                  </div>
+                  <input type="text" value="<?php echo set_value('contact_last_name'); ?>" name="contact_last_name" placeholder="Contact last name" class="form-control" />
+                </div>
+
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                    <i class="now-ui-icons users_circle-08"></i>
+                    </span>
+                  </div>
+                  <input type="text" value="<?php echo set_value('contact_email'); ?>" name="contact_email" placeholder="Contact email" class="form-control" />
+                </div>
+
+                <div class="input-group no-border input-lg" id="div_suggestions">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
                       <i class="now-ui-icons text_caps-small"></i>
                     </span>
                   </div>
-                  <input type="text" name="name" class="form-control" placeholder="University name">
+                  <input type="text" value="<?php echo set_value('name'); ?>" name="name" id="name" class="form-control" placeholder="University name">
                 </div>
 
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                    <i class="now-ui-icons users_circle-08"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="contact_first_name" placeholder="Contact first name" class="form-control" />
-                </div>
-
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                    <i class="now-ui-icons users_circle-08"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="contact_last_name" placeholder="Contact last name" class="form-control" />
-                </div>
-
-                <div class="input-group no-border input-lg">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                    <i class="now-ui-icons users_circle-08"></i>
-                    </span>
-                  </div>
-                  <input type="text" name="contact_email" placeholder="Contact email" class="form-control" />
-                </div>
+               
+          
 
               </div>
               
@@ -165,11 +176,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
-    </div>
+    
 
   </div>
   <!--   Core JS Files   -->
-  <script src="<?php echo base_url(); ?>assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="<?php echo base_url(); ?>assets/js/core/bootstrap.min.js" type="text/javascript"></script>
   <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
@@ -179,9 +191,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
   <script src="<?php echo base_url(); ?>assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
   <script src="<?php echo base_url(); ?>assets/js/now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
+  <script src="<?php echo base_url(); ?>assets/js/autocomplete_uni.js" type="text/javascript"></script>
+
+
+
+
 </body>
 
 </html>

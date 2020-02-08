@@ -5,12 +5,13 @@ class Register_Uni extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('university');
+		$this->load->model('potential_universities');
 		$this->load->library('form_validation');
 	}
 	
 	public function index(){
-
-		$this->load->view('register_uni');
+		$data['potential_universities'] = $this->potential_universities->get_universities();
+		$this->load->view('register_uni', $data);
 	}
 
 	function validation(){
