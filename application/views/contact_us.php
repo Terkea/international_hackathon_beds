@@ -103,14 +103,14 @@
         <h3><b>Email:</b> blabla@blabla.com</h3>
       </div>
     </div>
-    <div class="section">
+    <div class="section section-contact-us text-center">
       <div class="container">
-
-        <h3 class="title">Enquiries</h3>
-        <h5 class="description">For any relevant questions don't hesitate and contact us.</h5>
-      
+        <h2>Contact us</h1>
+        <h4>For any relevent enquieries don't hesitate and write us an email.</h3>
+        <a class="btn btn-primary btn-round btn-block btn-lg" href="mailto:susan.brandreth@beds.ac.uk?subject=International Hackathon">Send email</a>
       </div>
     </div>
+      </form>
     <footer class="footer footer-default text-center">
       <div class=" container ">
           &copy;

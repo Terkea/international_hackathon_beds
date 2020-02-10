@@ -115,4 +115,54 @@ class User extends CI_Controller {
 		$this->load->view('contact_us');
 	}
 
+	public function validate_email(){
+		$this->form_validation->set_rules('full_name', 'Full name', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('message', 'Message', 'required');
+		$this->form_validation->set_rules('subject', 'Subject', 'required');
+		if ($this->form_validation->run()){
+			$data['send_email'] = array(
+				'name'			=>	$this->input->post('full_name'),
+				'email'			=>	$this->input->post('email'),
+				'subject'		=>	$this->input->post('message'),
+				'message'		=>	$this->input->post('subject'),
+			);
+
+		$send = $this->sendEmail($data['send_email']);
+
+		}else{
+			$this->contact_us();
+		}
+	}
+
+	private function sendEmail($mailData){
+        // Load the email library
+        $this->load->library('email');
+        
+        // Mail config
+        $to = 'terkeabt@gmail.com';
+        $from = 'codexworld@gmail.com';
+        $fromName = 'CodexWorld';
+        $mailSubject = 'Contact Request Submitted by '.$mailData['name'];
+        
+        // Mail content
+        $mailContent = '
+            <h2>Contact Request Submitted</h2>
+            <p><b>Name: </b>'.$mailData['name'].'</p>
+            <p><b>Email: </b>'.$mailData['email'].'</p>
+            <p><b>Subject: </b>'.$mailData['subject'].'</p>
+            <p><b>Message: </b>'.$mailData['message'].'</p>
+        ';
+            
+        $config['mailtype'] = 'html';
+        $this->email->initialize($config);
+        $this->email->to($to);
+        $this->email->from($from, $fromName);
+        $this->email->subject($mailSubject);
+        $this->email->message($mailContent);
+        
+        // Send email & return status
+        return $this->email->send()?true:false;
+    }
+
 }
